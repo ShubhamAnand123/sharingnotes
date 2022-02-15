@@ -7,11 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<>, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous">
+    <script>
+        var i =0;
+        var j = 0;
+        function divchange()
+        {
+            var divtag=document.getElementById("container56");
+            var bgcolor = ["yellow","cyan"];
+            var txtcolor=["red","black"]
+            divtag.style.backgroundColor=bgcolor[i];
+            divtag.style.color=txtcolor[j];
+            i=(i+1)%bgcolor.length;
+            j=(j+1)%txtcolor.length;
+        }
+        setInterval(divchange,2000);
     </script>
+        
 
     <title>Notes Sharing</title>
     <style>
+        #container56{
+            border-radius: 50px;
+            background-color: rgb(255, 51, 0);
+            height: 11vh;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+
+        }
         body {
             background-image: linear-gradient(to top, #aeeef3 0%, #e7f0fd 100%);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -23,22 +49,26 @@
         }
 
 
-        .container5 {
+        /*.container5 {
             background-color: green;
             height: 11vh;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+            
+        }*/
 
         .link {
-            height: 60px;
-            width: 70px;
-            background-color: #caf7e3;
+            height: 62px;
+            width: 62px;
+            background-color: #fff;
             border-radius: 40px;
             text-align: center;
+            align-items: center;
             margin: 4px;
             line-height: 60px;
+            transition:0.2s;
+            box-shadow: 0 10px 4px rgba(0,0,0,-5);
         }
 
 
@@ -48,6 +78,7 @@
 
         a:hover i {
             transform: scale(1.5);
+            transform: translate(0,-5px);
         }
 
         .youtube:hover {
@@ -73,8 +104,8 @@
 
 
         .container1 h3 {
-            color: cornflowerblue;
-            font-size: 25px;
+            color: rgb(16, 62, 148);
+            font-size: 28px;
         }
 
         .container1 h1 {
@@ -91,7 +122,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             width: 100%;
             height: 100%;
-            border: 3px solid black;
+            /*border: 3px solid black;*/
             flex-flow: row wrap;
             justify-content: center;
             align-items: center;
@@ -104,19 +135,19 @@
             text-align: center;
             font-weight: bold;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            width: 400px;
+            width: 500px;
             height: 600px;
             background-image: linear-gradient(to top, #97ebe4 0%, #e7f0fd 100%);
             border: 3px solid black;
             margin: 10px;
             padding: 3px;
-            box-shadow: 9px 8px purple, 10px 9px red;
+            box-shadow: 0px 10px rgb(139, 214, 233), 10px 9px rgb(48, 116, 112);
             transition-property: background-color;
             transition-duration: 1s;
         }
 
         .container1 {
-            background-color: rgb(188, 241, 241);
+            /*background-color: rgb(188, 241, 241);*/
             width: 600px;
             height: 120px;
             position: relative;
@@ -139,9 +170,10 @@
             text-shadow: 2px 2px 2px rgb(78, 182, 74);
 
         }
+       
 
         .item:hover {
-            border: 1px solid brown;
+            border: 1px solid rgb(45, 124, 228);
             background-color: coral;
             color: brown;
         }
@@ -158,40 +190,87 @@
         }
 
         .logo {
-            margin: 8px;
-            padding-right: 8px;
+            margin: 5px;
+            padding-right: 6px;
             margin-right: 2px;
-            border-radius: 20px;
+           border-radius: 30px;
 
         }
+        .container h3{
+            text-shadow: 7px 11px 5px rgba(21, 90, 110, 0.966);;
+
+        }
+        .container1 h3{
+            text-shadow: 7px 11px 5px rgba(147, 215, 236, 0.5);;
+        }
+        .container1 h1{
+            text-shadow: 7px 11px 5px rgba(80, 161, 185, 0.966);;
+        }
+        .load{
+            /*display: flex;
+        position:absolute;
+        align-items: flex-start;*/
+        top:98%;
+        right:98%;
+        border:12px solid blue;
+        border-radius: 60px;
+        border-top: 10px solid rgb(197, 238, 236);
+        width:35px;
+        height: 35px;
+        animation: spin 3s linear infinite;
+        -webkit-animation: spin 3s linear infinite;
+
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+
+        }
+        @-webkit-keyframes spin{
+            0% {transform:rotate(0deg)
+        }
+        100%{
+            transform: rotate(360deg);
+        }}
     </style>
 </head>
 
 
 <body>
+   
     <div id="logo">
         <img src="download.png"alt="MSRIT RAMAIAH.com">
     </div>
     <div class="container5">
         <a class="link linkedin">
-            <i class="fab fa-2x fa-linkedin"></i>
+            <i class="fab fa-3x fa-linkedin"></i>
 
             <a class="link instagram">
-                <i class="fab fa-2x fa-instagram"></i>
+                <i class="fab fa-3x fa-instagram"></i>
             </a>
             <a class="link facebook">
-                <i class="fab fa-2x fa-facebook"></i>
+                <i class="fab fa-3x fa-facebook"></i>
             </a>
             <a class="link whatsapp">
-                <i class="fab fa-2x fa-whatsapp"></i>
+                <i class="fab fa-3x fa-whatsapp"></i>
             </a>
 
+    </div>
+    <div id = "container56">
+        <h1>IMPORTANT LINKS ---</h1>   
+        <a href="https://docs.google.com/document/d/13gshIaKUqVSH_EbUm5SnCso5b4i3GOCgvW8qcrGMN2U/edit?usp=sharing"
+            target="_blank" class="btn">        <h2>click here</h2>    </a>
     </div>
 
     <div class="container1">
         <h3>
-            <light>STUDY MATERIAL FOR</light>
-        </h3>
+            STUDY MATERIAL FOR        </h3>
         <h1><strong>PHYSICS CYCLE</strong></h1>
 
     </div>
@@ -200,6 +279,9 @@
 
         <div class="item" id="item-1">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>PHYSICS</h1>
             </strong>
             <h3>(EE13|ELECTRICAL AND ELECTRONICS)</h3>
@@ -224,7 +306,7 @@
 
             </ul>
             <div class="call_btn">
-                <a href="https://drive.google.com/drive/folders/17dtjxsiQ2Qaz7peqUm-gM1nr3hCrGrDJ "target="blank" class="btn_icon">
+                <a href="https://drive.google.com/drive/folders/17dtjxsiQ2Qaz7peqUm-gM1nr3hCrGrDJ" class="btn_icon">
                     <i class="fas fa-link fa-5x fa-color"></i>
                     <span class="circle"></span>
 
@@ -236,6 +318,9 @@
         </div>
         <div class="item" id="item-2">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>MATHEMATICS</h1>
             </strong>
             <h3>(MA11|MATHS)</h3>
@@ -247,7 +332,7 @@
                     </a></li>
             </ul>
             <div class="call_btn">
-                <a href="https://drive.google.com/drive/folders/17dtjxsiQ2Qaz7peqUm-gM1nr3hCrGrDJ" target="blank"class="btn_icon">
+                <a href="https://drive.google.com/drive/folders/17dtjxsiQ2Qaz7peqUm-gM1nr3hCrGrDJ" class="btn_icon">
                     <i class="fas fa-link fa-5x fa-color"></i>
                     <span class="circle"></span>
                 </a>
@@ -259,6 +344,9 @@
 
         <div class="item" id="item-3">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>COMPUTER APPLICATION AND DESIGN</h1>
             </strong>
             <h3>(MEL17|CAED)</h3>
@@ -266,6 +354,9 @@
         </div>
         <div class="item" id="item-4">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>COMMUNICATIVE ENGLISH</h1>
             </strong>
             <h3>(HS12\HUMANITIES)</h3>
@@ -275,12 +366,12 @@
                 <h1>BASIC ELECTRICAL ENGINEERING</h1>
             </strong>
             <h3>(EE13|ELECTRICAL AND ELECTRONICS)</h3>
-
-
-
         </div>
         <div class="item" id="item-6">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>DESIGN THINKING</h1>
             </strong>
             <h3>(AEC16|)</h3>
@@ -288,11 +379,14 @@
         </div>
         <div class="item" id="item-7">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>BASICS OF CIVIL ENGINEERING & MECHANICS</h1>
             </strong>
             <h3>(CV14|CIVIL ENGINEERING)</h3>
             <div class="call_btn">
-                <a href="https://drive.google.com/file/d/1Ig1WLaCaTxJ2yKoC0UmaG9OD51lKTRyP/view?usp=sharing" target="blank"
+                <a href="https://drive.google.com/file/d/1Ig1WLaCaTxJ2yKoC0UmaG9OD51lKTRyP/view?usp=sharing"
                     class="btn_icon">
                     <i class="fas fa-link fa-5x fa-color"></i>
                     <span class="circle"></span>
@@ -303,6 +397,9 @@
         </div>
         <div class="item" id="item-8">
             <strong>
+                <div class="load" id="df">
+                   
+                </div>
                 <h1>COMMUNICATIVE ENGLISH</h1>
             </strong>
             <h3>(HS12|HUMANITIES)</h3>
